@@ -372,7 +372,7 @@ func main() {
 			fmt.Printf("Decoding re-assembled packet: %s\n", newip4.NextLayerType())
 			pb, ok := packet.(gopacket.PacketBuilder)
 			if !ok {
-				panic("Not a PacketBuilder")
+				log.Panicln("Not a PacketBuilder")
 			}
 			nextDecoder := newip4.NextLayerType()
 			nextDecoder.Decode(newip4.Payload, pb)
