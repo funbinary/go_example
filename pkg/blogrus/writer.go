@@ -40,6 +40,7 @@ func NewDefaultMultiWriter(filename string, maxSize int64, maxLines int) *MultiW
 
 func (self *MultiWriter) Write(p []byte) (n int, err error) {
 	os.Stdout.Write(p)
+	fmt.Println(string(p))
 	return self.fileWriter.Write(p)
 }
 
