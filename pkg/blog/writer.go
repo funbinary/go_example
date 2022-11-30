@@ -67,7 +67,7 @@ func NewWriter(path string, format string, n string, size int) *Writer {
 	}
 
 	if err := w.openExistingOrNew(); err != nil {
-		log.Panicln(err)
+		panic(err)
 	}
 	return w
 }
