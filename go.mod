@@ -26,6 +26,11 @@ require (
 )
 
 require (
+	gopkg.in/alexcesaro/quotedprintable.v3 v3.0.0-20150716171945-2caba252f4dc // indirect
+	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df // indirect
+)
+
+require (
 	github.com/dghubble/sling v1.4.1 // indirect
 	github.com/gin-gonic/gin v1.8.2
 	github.com/gookit/goutil v0.6.1 // indirect

@@ -23,6 +23,10 @@ type Arguments struct {
 	Iface string `json:"iface,omitempty"`
 }
 
+type Response struct {
+	Return string `json:"return,omitempty"`
+}
+
 func main() {
 	socketPath := "/kds/custom.socket"
 	socket, err := NewSuricataSocket(socketPath)
@@ -37,7 +41,7 @@ func main() {
 	}
 	defer socket.Close()
 	v := &Command{
-		Command: "shutdown",
+		Command: "",
 	}
 	if err = socket.send(v); err != nil {
 		warn := &struct {
