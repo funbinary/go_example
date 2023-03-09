@@ -6,11 +6,11 @@ import (
 )
 
 func main() {
-	userName := "xxxxxx@163.com"
+	userName := "xxxx@163.com"
 	authCode := "xxxx"
-	host := "smtp.163.com"
-	port := "25"
-	err := SendMail(userName, authCode, host, port, "xxxx@qq.com", "糊了", "你昨天干嘛了", "我昨天发呆了一天")
+	host := "localhost"
+	port := "2500"
+	err := SendMail(userName, authCode, host, port, "byhu@1.com", "糊了", "你昨天干嘛了", "我昨天发呆了一天")
 	if err != nil {
 		panic(err)
 	}

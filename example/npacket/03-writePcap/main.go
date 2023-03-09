@@ -12,7 +12,7 @@ import (
 )
 
 var (
-	device      string = "\\Device\\NPF_{C410B1B0-56DE-4CD5-BC7A-5A5ACAB7619F}"
+	device      string = "br0"
 	snaplen     int32  = 65536
 	promiscuous bool   = true
 	err         error
@@ -42,14 +42,8 @@ func main() {
 	// 读取包
 	for packet := range packetSource.Packets() {
 		// 打印包
-		fmt.Println(packet)
+		//fmt.Println(packet)
 		// 写入包
 		w.WritePacket(packet.Metadata().CaptureInfo, packet.Data())
-		packetCount++
-
-		// Only capture 100 and then stop
-		if packetCount > 100 {
-			break
-		}
 	}
 }

@@ -1,8 +1,8 @@
 #! /bin/bash -x
 workDir=$(cd $(dirname $0); pwd)
 echo 当前工作目录: $workDir
-mod=ftp
-target=$workDir/npacket
+exe=ftp
+target=$workDir/$exe
 sshPassword=ics@beyondinfo
 remoteAddr=192.168.3.11
 remotePath=/kds/bin
@@ -13,7 +13,7 @@ echo 编译目录:$goBuildDir
 
 # 创建构建目录
 cd $workDir
-go build -o npacket main.go
+go build -o $exe main.go
 
 echo 编译完成，开始拷贝ui程序到$remoteAddr:$remotePath
 # 使用sshpass直接拷贝文件到指定机器
