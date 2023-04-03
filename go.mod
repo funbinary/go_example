@@ -3,8 +3,11 @@ module github.com/funbinary/go_example
 go 1.19
 
 require (
+	github.com/PuerkitoBio/goquery v1.8.1
+	github.com/antchfx/htmlquery v1.3.0
 	github.com/at-wat/ebml-go v0.16.0
 	github.com/bwmarrin/snowflake v0.3.0
+	github.com/chromedp/chromedp v0.9.1
 	github.com/google/gopacket v1.1.19
 	github.com/likexian/host-stat-go v0.0.0-20190516151207-c9cf36dd6ce9
 	github.com/matoous/go-nanoid/v2 v2.0.0
@@ -14,22 +17,28 @@ require (
 	github.com/pion/webrtc/v3 v3.1.44
 	github.com/pkg/errors v0.9.1
 	github.com/rs/xid v1.4.0
+	github.com/sashabaranov/go-openai v1.5.7
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/sirupsen/logrus v1.9.0
 	github.com/sony/sonyflake v1.1.0
+	github.com/spf13/cobra v1.6.1
 	github.com/spf13/viper v1.13.0
 	github.com/unidoc/unipdf/v3 v3.43.0
 	go.uber.org/atomic v1.10.0
 	go.uber.org/zap v1.23.0
 	golang.org/x/exp v0.0.0-20221126150942-6ab00d035af9
 	golang.org/x/exp/event v0.0.0-20221126150942-6ab00d035af9
-	golang.org/x/net v0.4.0
-	golang.org/x/sys v0.3.0
-	golang.org/x/text v0.7.0
+	golang.org/x/net v0.8.0
+	golang.org/x/sys v0.6.0
+	golang.org/x/text v0.8.0
 	gopkg.in/gomail.v2 v2.0.0-20160411212932-81ebce5c23df
 )
 
 require (
+	github.com/andybalholm/cascadia v1.3.1 // indirect
+	github.com/antchfx/xpath v1.2.3 // indirect
+	github.com/chromedp/cdproto v0.0.0-20230220211738-2b1ec77315c9 // indirect
+	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
 	github.com/gin-contrib/sse v0.1.0 // indirect
@@ -37,16 +46,21 @@ require (
 	github.com/go-playground/locales v0.14.0 // indirect
 	github.com/go-playground/universal-translator v0.18.0 // indirect
 	github.com/go-playground/validator/v10 v10.11.1 // indirect
+	github.com/gobwas/httphead v0.1.0 // indirect
+	github.com/gobwas/pool v0.2.1 // indirect
+	github.com/gobwas/ws v1.1.0 // indirect
 	github.com/goccy/go-json v0.9.11 // indirect
+	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/google/uuid v1.3.0 // indirect
-	github.com/gookit/color v1.5.2 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
 	github.com/inconshreveable/mousetrap v1.0.1 // indirect
+	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
 	github.com/likexian/gokit v0.25.10 // indirect
 	github.com/magiconair/properties v1.8.6 // indirect
+	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/mattn/go-isatty v0.0.16 // indirect
 	github.com/mitchellh/mapstructure v1.5.0 // indirect
 	github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd // indirect
@@ -69,7 +83,6 @@ require (
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/spf13/afero v1.8.2 // indirect
 	github.com/spf13/cast v1.5.0 // indirect
-	github.com/spf13/cobra v1.6.1 // indirect
 	github.com/spf13/jwalterweatherman v1.1.0 // indirect
 	github.com/spf13/pflag v1.0.5 // indirect
 	github.com/stretchr/testify v1.8.1 // indirect
@@ -80,7 +93,6 @@ require (
 	github.com/unidoc/pkcs7 v0.1.0 // indirect
 	github.com/unidoc/timestamp v0.0.0-20200412005513-91597fd3793a // indirect
 	github.com/unidoc/unitype v0.2.1 // indirect
-	github.com/xo/terminfo v0.0.0-20210125001918-ca9a967f8778 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
