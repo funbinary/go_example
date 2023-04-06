@@ -3,10 +3,12 @@ module github.com/funbinary/go_example
 go 1.19
 
 require (
+	github.com/JohannesKaufmann/html-to-markdown v1.3.7
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/antchfx/htmlquery v1.3.0
 	github.com/at-wat/ebml-go v0.16.0
 	github.com/bwmarrin/snowflake v0.3.0
+	github.com/chromedp/cdproto v0.0.0-20230220211738-2b1ec77315c9
 	github.com/chromedp/chromedp v0.9.1
 	github.com/google/gopacket v1.1.19
 	github.com/likexian/host-stat-go v0.0.0-20190516151207-c9cf36dd6ce9
@@ -17,7 +19,8 @@ require (
 	github.com/pion/webrtc/v3 v3.1.44
 	github.com/pkg/errors v0.9.1
 	github.com/rs/xid v1.4.0
-	github.com/sashabaranov/go-openai v1.5.7
+	github.com/russross/blackfriday/v2 v2.1.0
+	github.com/sashabaranov/go-openai v1.6.1
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/sirupsen/logrus v1.9.0
 	github.com/sony/sonyflake v1.1.0
@@ -37,7 +40,6 @@ require (
 require (
 	github.com/andybalholm/cascadia v1.3.1 // indirect
 	github.com/antchfx/xpath v1.2.3 // indirect
-	github.com/chromedp/cdproto v0.0.0-20230220211738-2b1ec77315c9 // indirect
 	github.com/chromedp/sysutil v1.0.0 // indirect
 	github.com/davecgh/go-spew v1.1.1 // indirect
 	github.com/fsnotify/fsnotify v1.5.4 // indirect
