@@ -1,23 +1,18 @@
+// github.com/bigwhite/experiments/tree/master/slog-examples/demo2/main.go
 package main
 
-import "fmt"
-
-type Tmp struct {
-}
-
-type rob struct {
-	nodes map[string]Tmp
-}
-
-var std = &rob{
-	nodes: make(map[string]Tmp),
-}
+import (
+	"fmt"
+)
 
 func main() {
-	t := Tmp{}
-	fmt.Printf("%p\n", &t)
-	std.nodes["123"] = t
-	v := std.nodes["123"]
-	fmt.Printf("%p\n", &v)
+	var ch chan *int
+	go func() {
+		<-ch
+	}()
+	select {
+	case ch <- nil:
+		fmt.Println("it's time")
+	}
 
 }

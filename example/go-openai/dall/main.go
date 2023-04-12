@@ -5,6 +5,7 @@ import (
 	"context"
 	"encoding/base64"
 	"fmt"
+	"github.com/funbinary/go_example/pkg/bfile"
 	openai "github.com/sashabaranov/go-openai"
 	"image/png"
 	"net/http"
@@ -13,7 +14,7 @@ import (
 )
 
 func main() {
-	key := "XXX"
+	key := "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"
 	gptConfig := openai.DefaultConfig(key)
 
 	{
@@ -35,7 +36,7 @@ func main() {
 
 	// Sample image by link
 	reqUrl := openai.ImageRequest{
-		Prompt:         "一群小鸭嘎嘎叫",
+		Prompt:         "车水马龙",
 		Size:           openai.CreateImageSize256x256,
 		ResponseFormat: openai.CreateImageResponseFormatURL,
 		N:              5,
@@ -46,14 +47,14 @@ func main() {
 		fmt.Printf("Image creation error: %v\n", err)
 		return
 	}
-	fmt.Println(respUrl.Data[0].URL)
+	fmt.Println(respUrl.Data[0].URL) // 输出图片的URL
 
 	// Example image as base64
 	reqBase64 := openai.ImageRequest{
-		Prompt:         "Portrait of a humanoid parrot in a classic costume, high detail, realistic light, unreal engine",
+		Prompt:         "车水马龙",
 		Size:           openai.CreateImageSize256x256,
 		ResponseFormat: openai.CreateImageResponseFormatB64JSON,
-		N:              1,
+		N:              7,
 	}
 
 	respBase64, err := c.CreateImage(ctx, reqBase64)
@@ -75,7 +76,7 @@ func main() {
 		return
 	}
 
-	file, err := os.Create("example.png")
+	file, err := os.Create(bfile.Join(bfile.SelfDir(), "example.png"))
 	if err != nil {
 		fmt.Printf("File creation error: %v\n", err)
 		return
