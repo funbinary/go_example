@@ -3,7 +3,6 @@ module github.com/funbinary/go_example
 go 1.19
 
 require (
-	github.com/JohannesKaufmann/html-to-markdown v1.3.7
 	github.com/PuerkitoBio/goquery v1.8.1
 	github.com/antchfx/htmlquery v1.3.0
 	github.com/at-wat/ebml-go v0.16.0
@@ -19,14 +18,17 @@ require (
 	github.com/pion/webrtc/v3 v3.1.44
 	github.com/pkg/errors v0.9.1
 	github.com/rs/xid v1.4.0
-	github.com/russross/blackfriday/v2 v2.1.0
 	github.com/sashabaranov/go-openai v1.6.1
 	github.com/shirou/gopsutil v3.21.11+incompatible
 	github.com/sirupsen/logrus v1.9.0
 	github.com/sony/sonyflake v1.1.0
-	github.com/spf13/cobra v1.6.1
+	github.com/spf13/cobra v1.7.0
 	github.com/spf13/viper v1.13.0
 	github.com/unidoc/unipdf/v3 v3.43.0
+	github.com/yutopp/go-rtmp v0.0.4
+	github.com/zhangpeihao/goflv v0.0.0-20140409083800-f2c8a1d6c9e1
+	github.com/zhangpeihao/gortmp v0.0.0-20161114025007-d5f2189e629f
+	github.com/zhangpeihao/log v0.0.0-20170117094621-62e921e41859
 	go.uber.org/atomic v1.10.0
 	go.uber.org/zap v1.23.0
 	golang.org/x/exp v0.0.0-20221126150942-6ab00d035af9
@@ -55,8 +57,10 @@ require (
 	github.com/golang/groupcache v0.0.0-20210331224755-41bb18bfe9da // indirect
 	github.com/google/go-cmp v0.5.8 // indirect
 	github.com/google/uuid v1.3.0 // indirect
+	github.com/hashicorp/errwrap v1.1.0 // indirect
+	github.com/hashicorp/go-multierror v1.1.0 // indirect
 	github.com/hashicorp/hcl v1.0.0 // indirect
-	github.com/inconshreveable/mousetrap v1.0.1 // indirect
+	github.com/inconshreveable/mousetrap v1.1.0 // indirect
 	github.com/josharian/intern v1.0.0 // indirect
 	github.com/json-iterator/go v1.1.12 // indirect
 	github.com/leodido/go-urn v1.2.1 // indirect
@@ -96,6 +100,8 @@ require (
 	github.com/unidoc/timestamp v0.0.0-20200412005513-91597fd3793a // indirect
 	github.com/unidoc/unitype v0.2.1 // indirect
 	github.com/yusufpapurcu/wmi v1.2.2 // indirect
+	github.com/yutopp/go-amf0 v0.0.0-20180803120851-48851794bb1f // indirect
+	github.com/zhangpeihao/goamf v0.0.0-20140409082417-3ff2c19514a8 // indirect
 	go.uber.org/multierr v1.7.0 // indirect
 	golang.org/x/crypto v0.0.0-20220722155217-630584e8d5aa // indirect
 	golang.org/x/image v0.0.0-20211028202545-6944b10bf410 // indirect

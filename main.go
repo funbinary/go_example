@@ -1,23 +1,15 @@
 package main
 
-import "fmt"
-
-type Tmp struct {
-}
-
-type rob struct {
-	nodes map[string]Tmp
-}
-
-var std = &rob{
-	nodes: make(map[string]Tmp),
-}
+import (
+	"encoding/asn1"
+	"fmt"
+)
 
 func main() {
-	t := Tmp{}
-	fmt.Printf("%p\n", &t)
-	std.nodes["123"] = t
-	v := std.nodes["123"]
-	fmt.Printf("%p\n", &v)
-
+	mdata, err := asn1.Marshal(0x3e)
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	fmt.Println(mdata)
 }

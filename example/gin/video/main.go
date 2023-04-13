@@ -8,6 +8,7 @@ import (
 	"fmt"
 	"github.com/funbinary/go_example/pkg/bfile"
 	"github.com/gin-gonic/gin"
+	"net/http"
 )
 
 // 主函数
@@ -15,6 +16,8 @@ func main() {
 	r := gin.Default()
 
 	//Get路由，动态路由
+	r.GET("/hello", Hello)
+
 	r.GET("/GetRecord/:path", DowFile)
 
 	//监听端口
@@ -33,4 +36,12 @@ func DowFile(c *gin.Context) {
 	//响应一个文件
 	c.File(filename)
 	return
+}
+
+func Hello(c *gin.Context) {
+	c.JSON(http.StatusOK, gin.H{
+		"code":    200,
+		"success": true,
+		"msg":     "hello",
+	})
 }
