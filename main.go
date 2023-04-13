@@ -1,15 +1,26 @@
+// github.com/bigwhite/experiments/tree/master/slog-examples/demo2/main.go
 package main
 
+<<<<<<< .mine
 import (
 	"encoding/asn1"
 	"fmt"
 )
+=======
+import (
+	"fmt"
+)
+
+>>>>>>> .theirs
 
 func main() {
-	mdata, err := asn1.Marshal(0x3e)
-	if err != nil {
-		fmt.Println(err)
-		return
+	var ch chan *int
+	go func() {
+		<-ch
+	}()
+	select {
+	case ch <- nil:
+		fmt.Println("it's time")
 	}
-	fmt.Println(mdata)
+
 }
