@@ -14,7 +14,7 @@ import (
 )
 
 func main() {
-	key := "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"
+	key := "xxx"
 	gptConfig := openai.DefaultConfig(key)
 
 	{
